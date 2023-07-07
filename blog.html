@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+    <style>
+        header {
+            position: relative;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            background: transparent;
+        }
+
+        .navbar__card {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background-color: #F8FBFE;
+            border-radius: 8px;
+            z-index: 1;
+        }
+
+        .header__navbar {
+            margin: 1rem;
+            padding: .5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .logo {
+            position: inherit !important;
+            display: inline !important;
+        }
+
+        .header__navbar__content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .header__navbar__content {
+                justify-content: start;
+                align-items: center;
+            }
+        }
+
+        .header__navbar__left {
+            /* text-align: center; */
+            /* flex: 1; */
+        }
+
+        .header__navbar__center {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header__navbar__center li {
+            margin: 0 10px;
+            line-height: normal;
+        }
+
+        .header__navbar__center li a {
+            font-size: 1.2rem;
+            padding: 5px 0;
+            margin: 0 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="transparent z-depth-0 ">
+                <div class="nav-wrapper header__navbar">
+                    <div class="header__navbar__content">
+                        <div class="header__navbar__left">
+                            <a href="#" class="brand-logo logo grey-text text-darken-4"><i
+                                    class="material-icons">home</i> Logo</a>
+                        </div>
+                        <ul class="header__navbar__center hide-on-med-and-down">
+                            <li class="active flow-text"><a href="#" class="grey-text text-darken-4">Inicio</a></li>
+                            <li><a href="#" class="grey-text text-darken-4">Acerca de Nosotros</a></li>
+                            <li><a href="#" class="grey-text text-darken-4">Nuestros servicios</a></li>
+                            <li><a href="blog.html" class="grey-text text-darken-4">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="valign-wrapper">
+                            <a href="#" class="btn">Contacto</a>
+                        </div>
+                    </div>
+                    <a href="#modal1" class="sidenav-trigger right modal-trigger grey-text text-darken-4"><i
+                            class="material-icons">menu</i></a>
+                </div>
+            </nav>
+
+
+            <div class="row" style="position: relative;">
+                <div class="container" style="position: absolute;">
+                    <div id="modal1" class="modal half-modal col s12 m6 l4 row z-depth-0" style="width: 90%;">
+                        <div class="modal-content col s12">
+                            <style>
+                                #modal1 {
+                                    top: 0 !important;
+                                    margin: 1rem;
+                                }
+
+                                .modal.half-modal {
+                                    max-width: 600px;
+                                    /* Establece un valor adecuado para el tamaño máximo del modal */
+                                    width: 80%;
+                                }
+
+                                .modal-content>.card {
+                                    background-color: transparent;
+                                }
+                            </style>
+                            <div class="card z-depth-0">
+
+                                <div class="card-content no-padding">
+                                    <div class="row">
+                                        <div class="col s10">
+                                            <h4>Título de la Card</h4>
+                                        </div>
+                                        <div class="col s2">
+                                            <a href="#" class="modal-close right red-text"><i
+                                                    class="material-icons">close</i></a>
+                                        </div>
+                                        <div class="col s12 divider"></div>
+                                        <div class="col s12">
+                                            <style>
+                                                .no-border {
+                                                    border: none;
+                                                }
+
+                                                .b_bor_no {
+                                                    border-bottom: none !important;
+                                                }
+
+                                                .no-padding {
+                                                    padding: 0;
+                                                }
+                                            </style>
+                                            <div class="collection no-border">
+                                                <a href="#!"
+                                                    class="collection-item flow-text grey-text text-darken-4 b_bor_no">Alvin</a>
+                                                <a href="#!"
+                                                    class="collection-item flow-text grey-text text-darken-4 b_bor_no">Alvin</a>
+                                                <a href="#!"
+                                                    class="collection-item grey-text text-darken-4 b_bor_no">Alvin</a>
+                                                <a href="#!"
+                                                    class="collection-item grey-text text-darken-4 b_bor_no">Alvin</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="modal-close waves-effect waves-green btn">Cerrar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .half-modal {
+                            border-radius: 50px;
+                            overflow: hidden;
+                        }
+
+                        .half-modal .modal-content {
+                            height: 100%;
+                        }
+                    </style>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center">
+                        <h1>Bienvenidos a nuestro blog</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section blog">
+            <div class="container">
+                <div class="row card blog__card">
+                    <div class="col s12 m6 card-content ">
+
+                        <style>
+                            .blog__card {
+                                padding: 10px;
+                                margin: 0 auto;
+                                height: 40vh;
+                            }
+
+                            .blog__card .card-content {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                /* align-items: center; */
+                                gap: 5px;
+                                padding: 10px;
+                            }
+
+                            @media (max-width: 749px) {
+                                .blog__card {
+                                    height: 51vh;
+                                }
+                            }
+
+                            @media (max-width: 600px) {
+                                .blog__card {
+
+                                    height: 100%;
+                                }
+                            }
+
+                            .blog__author {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 1px;
+                                margin: 0 !important;
+                            }
+
+                            .blog__card .card-content h3 {
+
+                                margin: 5px 0 !important;
+                            }
+
+                            .custom-truncate {
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                word-break: break-word;
+                            }
+                        </style>
+                        <span class="flow-text">Categoria</span>
+                        <h3 class="title">Titulo del post </h3>
+                        <ul class="collection z-depth-0 " style="border: none;">
+                            <li class="collection-item avatar blog__author">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt=""
+                                    class="circle">
+                                <span class="title">Carlos Alexander</span>
+                                <p class="blue-text text-darken-4">Web Development</p>
+                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                            </li>
+                        </ul>
+
+                        <p class="custom-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Maxime eum excepturi, enim recusandae qui cumque pariatur asperiores at eius quibusdam
+                            numquam ducimus? hola soy una nuevo texto Veritatis odio placeat amet sed magnam, possimus reiciendis?</p>
+                        <style>
+                            .button-wrapper {
+                                display: flex;
+                                justify-content: start;
+                                align-items: center;
+                                /* margin-top: 10px */
+                            }
+
+                            .button-arrow {
+                                --primary-color: #645bff;
+                                --secondary-color: #fff;
+                                --hover-color: #111;
+                                --arrow-width: 10px;
+                                --arrow-stroke: 2px;
+
+                                margin: 10px 0;
+                                box-sizing: border-box;
+                                border: 0;
+                                border-radius: 20px;
+                                color: var(--secondary-color);
+                                padding: .5rem .8rem;
+                                background: var(--primary-color);
+                                display: inline-flex;
+                                transition: 0.2s background;
+                                align-items: center;
+                                gap: 0.6em;
+                                font-weight: bold;
+                            }
+
+                            .button-arrow .arrow-wrapper {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            .button-arrow .arrow {
+                                margin-top: 1px;
+                                width: var(--arrow-width);
+                                background: var(--primary-color);
+                                height: var(--arrow-stroke);
+                                position: relative;
+                                transition: 0.2s;
+                            }
+
+                            .button-arrow .arrow::before {
+                                content: "";
+                                box-sizing: border-box;
+                                position: absolute;
+                                border: solid var(--secondary-color);
+                                border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+                                display: inline-block;
+                                top: -3px;
+                                right: 3px;
+                                transition: 0.2s;
+                                padding: 3px;
+                                transform: rotate(-45deg);
+                            }
+
+                            .button-arrow:hover {
+                                background-color: var(--hover-color);
+                            }
+
+                            .button-arrow:hover .arrow {
+                                background: var(--secondary-color);
+                            }
+
+                            .button-arrow:hover .arrow:before {
+                                right: 0;
+                            }
+                        </style>
+                        <div class="button-wrapper">
+                            <a href="#" class="button-arrow">
+                                Contactanos
+                                <div class="arrow-wrapper">
+                                    <div class="arrow"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 card-img center" style="height: 100%;">
+
+                        <img class="responsive-img" style="object-fit: cover !important; height: 100%;"
+                            src="https://encolombia.com/wp-content/uploads/2021/12/Que-es-paisaje.jpg" alt="paisaje">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        var elemsSidenav = document.querySelectorAll('.sidenav');
+        var instancesSidenav = M.Sidenav.init(elemsSidenav);
+
+        var elemsModal = document.querySelectorAll('.modal');
+        var instancesModal = M.Modal.init(elemsModal);
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

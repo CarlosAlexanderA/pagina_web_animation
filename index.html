@@ -768,7 +768,7 @@
               font-size: 1.5rem;
             }
 
-            .hero-button {
+            .button-arrow {
               --primary-color: #645bff;
               --secondary-color: #fff;
               --hover-color: #111;
@@ -787,13 +787,13 @@
               font-weight: bold;
             }
 
-            .hero-button .arrow-wrapper {
+            .button-arrow .arrow-wrapper {
               display: flex;
               justify-content: center;
               align-items: center;
             }
 
-            .hero-button .arrow {
+            .button-arrow .arrow {
               margin-top: 1px;
               width: var(--arrow-width);
               background: var(--primary-color);
@@ -802,7 +802,7 @@
               transition: 0.2s;
             }
 
-            .hero-button .arrow::before {
+            .button-arrow .arrow::before {
               content: "";
               box-sizing: border-box;
               position: absolute;
@@ -816,23 +816,23 @@
               transform: rotate(-45deg);
             }
 
-            .hero-button:hover {
+            .button-arrow:hover {
               background-color: var(--hover-color);
             }
 
-            .hero-button:hover .arrow {
+            .button-arrow:hover .arrow {
               background: var(--secondary-color);
             }
 
-            .hero-button:hover .arrow:before {
+            .button-arrow:hover .arrow:before {
               right: 0;
             }
           </style>
           <div class="col s12 m7">
             <div class="hero-content">
-              <h1 class="hero-title">Una infraestructura financiera para Internet</h1>
-              <p class="hero-description flow-text"><span>Texto de ejemplo</span> para la descripción del hero.</p>
-              <a href="#" class="hero-button">
+              <h1 class="hero-title" style="opacity: .7;">Una infraestructura financiera para Internet</h1>
+              <p class="hero-description flow-text"><span>Texto de ejemplo</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit doloribus recusandae maiores cum, ea, suscipit ratione modi ipsam, consequuntur debitis eius? Modi earum vel assumenda laboriosam soluta eos, voluptatum dolores!</p>
+              <a href="#" class="button-arrow">
                 Contactanos
                 <div class="arrow-wrapper">
                   <div class="arrow"></div>
