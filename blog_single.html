@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h3>Conoce mas acerca de titulo </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col s12 m12 l8 xl9">
+                        <div class="card blue" style="padding: 10px 20px; border-radius: 2rem;">
+
+                            <div class="row">
+                                <div class="card-title col s12 m12 l8">
+                                    <h2>titulo de todo</h2>
+                                </div>
+                                <div class="col right s12 m6 l4">
+                                    <ul class="collection card">
+                                        <li class="collection-item avatar card-content">
+                                            <img src="https://encolombia.com/wp-content/uploads/2021/12/Que-es-paisaje.jpg"
+                                                alt="" class="circle">
+                                            <span class="title ">CArlos Alexnader</span>
+                                            <p>Ingeniero de Software</p>
+                                            <a href="#!" class="secondary-content"><i
+                                                    class="material-icons">grade</i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="card z-depth-0">
+                                        <div class="card-image"
+                                            style="margin: 10px 20px; border-radius: 10px; overflow: hidden;">
+                                            <img
+                                                src="https://encolombia.com/wp-content/uploads/2021/12/Que-es-paisaje.jpg">
+                                            <span class="card-title">Card Title</span>
+                                        </div>
+                                        <div class="card-content" style="margin: 10px 10px;">
+                                            <div class="row">
+                                                <div class="col s12">
+                                                    <p>I am a very simple card. I am good at containing small bits of
+                                                        information.
+                                                        I am convenient because I require little markup to use
+                                                        effectively.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="comments-container row">
+                                    <h3 class="col s12">Comentarios <a href="#">de los usuarios</a></h3>
+            
+                                    <ul id="comments-list" class="comments-list col s12">
+                                        <li>
+                                            <div class="comment-main-level row">
+                                                <!-- Avatar -->
+                                                <div class="comment-avatar col s2"><img
+                                                        src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg"
+                                                        alt="" class="responsive-img" style="object-fit: cover;">
+                                                </div>
+                                                <!-- Contenedor del Comentario -->
+                                                <div class="comment-box col s10 card" style="padding: 0px; position: relative;">
+                                                    <div class="comment-head">
+                                                        <h6 class="comment-name by-author"><a
+                                                                href="http://creaticode.com/blog">Carlos Alexander</a></h6>
+                                                        <span>hace 20 minutos</span>
+                                                        <i class="fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi
+                                                        et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                                    </div>
+                                                    <div class="comment-footer">
+                                                        <button id="message">responder</button>
+                                                    </div>
+            
+                                                    <div class="row hidden" id="message-form" style="margin: 0;">
+                                                        <form class="col s12" >
+                                                          <div class="row">
+                                                            <div class="input-field col s6">
+                                                              <input  id="first_name" type="text" class="validate">
+                                                              <label for="first_name">First Name</label>
+                                                            </div>
+                                                            <div class="input-field col s6">
+                                                              <input id="last_name" type="text" class="validate">
+                                                              <label for="last_name">Last Name</label>
+                                                            </div>
+                                                          </div>
+                                                          <div class="row">
+                                                            <div class="input-field col s12">
+                                                              <input id="email" type="email" class="validate">
+                                                              <label for="email">Email</label>
+                                                            </div>
+                                                          </div>
+                                                          <div class="row">
+                                                            <div class="input-field col s12">
+                                                              <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                                              <label for="textarea1">Textarea</label>
+                                                            </div>
+                                                          </div>
+                                                        </form>
+                                                      </div>
+            
+                                                    <style>
+                                                        
+            
+                                                        .hidden {
+                                                            display: none;
+                                                        }
+                                                    </style>
+                                                    <script>
+                                                        // Obtener el botón y el formulario por su ID
+                                                        const messageButton = document.getElementById('message');
+                                                        const messageForm = document.getElementById('message-form');
+                                                      
+                                                        // Agregar evento de clic al botón
+                                                        messageButton.addEventListener('click', () => {
+                                                          // Alternar la visibilidad del formulario agregando o eliminando la clase 'hidden'
+                                                          messageForm.classList.toggle('hidden');
+                                                        });
+                                                      </script>
+                                                </div>
+            
+            
+                                            </div>
+            
+            
+                                            <!-- Respuestas de los comentarios -->
+                                            <ul class="comments-list reply-list row" style="left: 10%; width: 90%;">
+                                                <li class="row col s12">
+                                                    <!-- Avatar -->
+                                                    <div class="comment-avatar col s2"><img
+                                                            src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg"
+                                                            alt="" class="responsive-img"></div>
+                                                    <!-- Contenedor del Comentario -->
+                                                    <div class="comment-box col s10" style="padding: 0; left: 15px; ">
+                                                        <div class="comment-head">
+                                                            <h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena
+                                                                    Rojero</a></h6>
+                                                            <span>hace 10 minutos</span>
+                                                            <i class="fa fa-reply"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis
+                                                            animi et iure laudantium vitae, praesentium optio, sapiente distinctio
+                                                            illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+            
+                                               
+                                            </ul>
+                                        </li>
+            
+                                        <li style="left: 10%; width: 90%;">
+                                            <div class="row" id="message-form" style="margin: 0;">
+                                                <div class="col s12"><h4>Deja tu comentario</h4></div>
+                                                <form class="col s12" >
+                                                  <div class="row">
+                                                    <div class="input-field col s6">
+                                                      <input  id="first_name" type="text" class="validate">
+                                                      <label for="first_name">First Name</label>
+                                                    </div>
+                                                    <div class="input-field col s6">
+                                                      <input id="last_name" type="text" class="validate">
+                                                      <label for="last_name">Last Name</label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="input-field col s12">
+                                                      <input id="email" type="email" class="validate">
+                                                      <label for="email">Email</label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="input-field col s12">
+                                                      <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                                      <label for="textarea1">Textarea</label>
+                                                    </div>
+                                                  </div>
+                                                </form>
+                                              </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <style>
+                                    .comments-container {
+                                        margin: 60px auto 15px;
+                                    }
+            
+                                    .comments-container h1 {
+                                        font-size: 36px;
+                                        color: #283035;
+                                        font-weight: 400;
+                                    }
+            
+                                    .comments-container h1 a {
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                    }
+            
+                                    .comments-list {
+                                        margin-top: 30px;
+                                        position: relative;
+                                    }
+            
+                                    /**
+             * Lineas / Detalles
+             -----------------------*/
+                                    .comments-list:before {
+                                        content: '';
+                                        width: 2px;
+                                        height: 100%;
+                                        background: #c7cacb;
+                                        position: absolute;
+                                        left: 32px;
+                                        top: 0;
+                                    }
+            
+                                    .comments-list:after {
+                                        content: '';
+                                        position: absolute;
+                                        background: #c7cacb;
+                                        bottom: 0;
+                                        left: 27px;
+                                        width: 7px;
+                                        height: 7px;
+                                        border: 3px solid #dee1e3;
+                                        -webkit-border-radius: 50%;
+                                        -moz-border-radius: 50%;
+                                        border-radius: 50%;
+                                    }
+            
+                                    .reply-list:before,
+                                    .reply-list:after {
+                                        display: none;
+                                    }
+            
+                                    .reply-list li:before {
+                                        content: '';
+                                        width: 60px;
+                                        height: 2px;
+                                        background: #c7cacb;
+                                        position: absolute;
+                                        top: 25px;
+                                        left: -55px;
+                                    }
+            
+            
+                                    .comments-list li {
+                                        margin-bottom: 15px;
+                                        display: block;
+                                        position: relative;
+                                    }
+            
+                                    .comments-list li:after {
+                                        content: '';
+                                        display: block;
+                                        clear: both;
+                                        height: 0;
+                                        width: 0;
+                                    }
+            
+                                    .reply-list {
+                                        padding-left: 88px;
+                                        clear: both;
+                                        margin-top: 15px;
+                                    }
+            
+                                    /**
+             * Avatar
+             ---------------------------*/
+                                    .comments-list .comment-avatar {
+
+                                        border: 3px solid #FFF;
+                                        height: 100%;
+                                        
+
+                                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+                                        overflow: hidden;
+                                    }
+            
+                                    .comments-list .comment-avatar img {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+            
+                                    .reply-list .comment-avatar {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+            
+                                    .comment-main-level {
+                                        display: flex;
+                                        gap: 10px;
+                                    }
+            
+                                    .comment-main-level:after {
+                                        content: '';
+                                        width: 0;
+                                        height: 0;
+                                        display: block;
+                                        clear: both;
+                                    }
+            
+                                    /**
+             * Caja del Comentario
+             ---------------------------*/
+                                    .comments-list .comment-box {
+
+                                        position: relative;                                        
+                                        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+                                        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+                                        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+                                    }
+            
+                                    .comments-list .comment-box:before,
+                                    .comments-list .comment-box:after {
+                                        content: '';
+                                        height: 0;
+                                        width: 0;
+                                        position: absolute;
+                                        display: block;
+                                        border-width: 10px 12px 10px 0;
+                                        border-style: solid;
+                                        border-color: transparent #FCFCFC;
+                                        top: 8px;
+                                        left: -11px;
+                                    }
+            
+                                    .comments-list .comment-box:before {
+                                        border-width: 11px 13px 11px 0;
+                                        border-color: transparent rgba(0, 0, 0, 0.05);
+                                        left: -12px;
+                                    }
+            
+
+            
+                                    .comment-box .comment-head {
+                                        background: #FCFCFC;
+                                        padding: 10px 12px;
+                                        border-bottom: 1px solid #E5E5E5;
+                                        overflow: hidden;
+                                        -webkit-border-radius: 4px 4px 0 0;
+                                        -moz-border-radius: 4px 4px 0 0;
+                                        border-radius: 4px 4px 0 0;
+                                    }
+            
+                                    .comment-box .comment-head i {
+                                        float: right;
+                                        margin-left: 14px;
+                                        position: relative;
+                                        top: 2px;
+                                        color: #A6A6A6;
+                                        cursor: pointer;
+                                        -webkit-transition: color 0.3s ease;
+                                        -o-transition: color 0.3s ease;
+                                        transition: color 0.3s ease;
+                                    }
+            
+                                    .comment-box .comment-head i:hover {
+                                        color: #03658c;
+                                    }
+            
+                                    .comment-box .comment-name {
+                                        color: #283035;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        float: left;
+                                        margin-right: 10px;
+                                    }
+            
+                                    .comment-box .comment-name a {
+                                        color: #283035;
+                                    }
+            
+                                    .comment-box .comment-head span {
+                                        float: left;
+                                        color: #999;
+                                        font-size: 13px;
+                                        position: relative;
+                                        top: 1px;
+                                    }
+            
+                                    .comment-box .comment-content {
+                                        background: #FFF;
+                                        padding: 12px;
+                                        font-size: 15px;
+                                        color: #595959;
+                                        -webkit-border-radius: 0 0 4px 4px;
+                                        -moz-border-radius: 0 0 4px 4px;
+                                        border-radius: 0 0 4px 4px;
+                                    }
+            
+                                    .comment-footer {
+                                        background: #fff;
+            
+                                        border-top: 1px solid #E5E5E5;
+                                        padding: 5px;
+                                        font-size: 15px;
+                                        color: #595959;
+                                        -webkit-border-radius: 0 0 4px 4px;
+                                        -moz-border-radius: 0 0 4px 4px;
+                                        border-radius: 0 0 4px 4px;
+            
+                                    }
+            
+                                    .comment-footer span {
+                                        color: #03658c;
+                                    }
+            
+            
+                                    .comment-box .comment-name.by-author,
+                                    .comment-box .comment-name.by-author a {
+                                        color: #03658c;
+                                    }
+            
+                                    .comment-box .comment-name.by-author:after {
+                                        content: 'autor';
+                                        background: #03658c;
+                                        color: #FFF;
+                                        font-size: 12px;
+                                        padding: 3px 5px;
+                                        font-weight: 700;
+                                        margin-left: 10px;
+                                        -webkit-border-radius: 3px;
+                                        -moz-border-radius: 3px;
+                                        border-radius: 3px;
+                                    }
+            
+                                    /** =====================
+             * Responsive
+             ========================*/
+                                    @media only screen and (max-width: 766px) {
+
+            
+                                        .comments-list .comment-box {
+                                            width: 390px;
+                                        }
+            
+                                        .reply-list .comment-box {
+                                            width: 320px;
+                                        }
+                                    }
+                                </style>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col s12 m12 l4 xl3 red">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">textsms</i>
+                                        <input type="text" id="autocomplete-input" class="autocomplete">
+                                        <label for="autocomplete-input">Autocomplete</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var elems = document.querySelectorAll('.autocomplete');
+                                var instances = M.Autocomplete.init(elems, {
+                                    data: {
+                                        "Apple": null,
+                                        "Microsoft": null,
+                                        "Google": 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/706px-Google_%22G%22_Logo.svg.png',
+                                        "goolem": null
+                                    },
+                                    limit: 4,
+                                    minLength: 2
+
+
+                                });
+                            });
+                        </script>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="card">
+                                    <style>
+                                        .collection-item__btn {
+                                            display: block;
+                                            padding: 0 !important;
+                                            margin: 10px 20px !important;
+                                            line-height: 40px;
+                                            height: 40px;
+                                            border-radius: 20px;
+                                            margin-right: 10px;
+                                        }
+
+                                        .collection-item:hover {
+                                            background: #645bff;
+                                        }
+                                    </style>
+
+                                    <ul class="collection with-header">
+                                        <li class="collection-header">
+                                            <h5>First Names</h5>
+                                            data-category="all"
+                                        </li>
+                                        <li class="collection-item collection-item__btn waves-effect waves-light filter-item active"
+                                            data-category="all"><a href="#" class="btn-flat"
+                                                style="display: block; margin: 0; width: 100%; height: 100%; ">Todos</a>
+                                        </li>
+                                        <li class="collection-item collection-item__btn waves-effect waves-light filter-item"
+                                            data-category="seguridad"><a href="#" class="btn-flat "
+                                                style="display: block; margin: 0; width: 100%; height: 100%; ">seguridad</a>
+                                        </li>
+                                        <li class="collection-item collection-item__btn waves-effect waves-light">Alvin
+                                        </li>
+                                        <li class="collection-item collection-item__btn waves-effect waves-light">Alvin
+                                        </li>
+                                        <li class="collection-item collection-item__btn waves-effect waves-light">Alvin
+                                        </li>
+                                    </ul>
+
+                                    <script>
+                                        // Función para filtrar los blogs según la categoría seleccionada
+                                        function filterBlogs(category) {
+                                            const blogContainer = document.querySelector(".blogs__container");
+                                            const blogs = blogContainer.getElementsByClassName("blogs__item");
+                                            console.log(blogs)
+
+                                            for (let i = 0; i < blogs.length; i++) {
+                                                const blog = blogs[i];
+                                                const blogCategory = blog.getAttribute("data-category");
+
+                                                if (category === "all" || category === blogCategory) {
+                                                    blog.style.display = "block";
+                                                } else {
+                                                    blog.style.display = "none";
+                                                }
+                                            }
+                                        }
+
+                                        // Agrega eventos de clic a los elementos de filtro
+                                        const filterItems = document.getElementsByClassName("filter-item");
+                                        for (let i = 0; i < filterItems.length; i++) {
+                                            const item = filterItems[i];
+
+                                            item.addEventListener("click", function () {
+                                                const category = this.getAttribute("data-category");
+                                                filterBlogs(category);
+
+                                                // Cambia la clase activa
+                                                const activeItem = document.querySelector(".filter-item.active");
+                                                activeItem.classList.remove("active");
+                                                this.classList.add("active");
+                                            });
+                                        }
+
+                                    </script>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

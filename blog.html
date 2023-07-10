@@ -215,7 +215,7 @@
                             .blog__card {
                                 padding: 10px;
                                 margin: 0 auto;
-                                height: 40vh;
+                                height: 100%;
                             }
 
                             .blog__card .card-content {
@@ -227,16 +227,20 @@
                                 padding: 10px;
                             }
 
-                            @media (max-width: 749px) {
-                                .blog__card {
-                                    height: 51vh;
+                            .img__total {
+                                height: 40vh !important;
+                            }
+
+                            @media (max-width: 820px) {
+                                .img__total {
+                                    height: 32vh !important;
                                 }
                             }
 
                             @media (max-width: 600px) {
-                                .blog__card {
+                                .img__total {
 
-                                    height: 100%;
+                                    height: 100% !important;
                                 }
                             }
 
@@ -275,7 +279,8 @@
 
                         <p class="custom-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Maxime eum excepturi, enim recusandae qui cumque pariatur asperiores at eius quibusdam
-                            numquam ducimus? hola soy una nuevo texto Veritatis odio placeat amet sed magnam, possimus reiciendis?</p>
+                            numquam ducimus? hola soy una nuevo texto Veritatis odio placeat amet sed magnam, possimus
+                            reiciendis?</p>
                         <style>
                             .button-wrapper {
                                 display: flex;
@@ -355,15 +360,505 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col s12 m6 card-img center" style="height: 100%;">
+                    <div class="col s12 m6 card-img " style="height: 100%; position: relative;">
 
-                        <img class="responsive-img" style="object-fit: cover !important; height: 100%;"
+                        <img class="responsive-img img__total" style="object-fit: cover !important;"
                             src="https://encolombia.com/wp-content/uploads/2021/12/Que-es-paisaje.jpg" alt="paisaje">
+
+                        <div class="chip " style="position: absolute; right: 0; ">Subido Recientemente</div>
                     </div>
 
                 </div>
             </div>
         </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h2 class="center">cateogiras del blog</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m8 l8 xl9 blue">
+                        <!-- filter Images -->
+                        <div class="blogs__container row " id="blogs__container">
+                            <div class="col s12 m6 blogs__item" data-category="seguridad">
+                                <div class="card card-hover hoverable">
+                                    <div class="card-image" data-category="all">
+                                        <img src="https://encolombia.com/wp-content/uploads/2021/12/Que-es-paisaje.jpg">
+                                        <div class="chip red tab_card">Subido Recientemente</div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="blogs__item-hashtag">#webdevelopment #frontend</p>
+                                        <h4 class="blogs__item-title"><a
+                                                href="blog_single.html">{{blog.title}}</a>
+                                        </h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas modi, iure
+                                            expedita quae neque deserunt, perferendis officiis quidem beatae ducimus ut
+                                            rem exercitationem numquam aut nulla assumenda id a recusandae?</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <span id="hour_{{ loop.index }}">{{ blog.created }}</span>
+                                    </footer>
+
+                                </div>
+                            </div>
+                            <div class="col s12 m6 blogs__item" data-category="coll">
+                                <div class="card card-hover hoverable">
+                                    <div class="card-image" data-category="all">
+                                        <img src="https://encolombia.com/wp-content/uploads/2021/12/Que-es-paisaje.jpg">
+                                        <div class="chip red tab_card">Subido Recientemente</div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="blogs__item-hashtag">#webdevelopment #frontend</p>
+                                        <h4 class="blogs__item-title"><a
+                                                href="{{ url_for('main_web_site.blog_single', title=blog.title) }}">{{blog.title}}</a>
+                                        </h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas modi, iure
+                                            expedita quae neque deserunt, perferendis officiis quidem beatae ducimus ut
+                                            rem exercitationem numquam aut nulla assumenda id a recusandae?</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <span id="hour_{{ loop.index }}">{{ blog.created }}</span>
+                                    </footer>
+
+                                </div>
+                            </div>
+
+                            <div class="col s12 m6 blogs__item" data-category="seguridad">
+                                <div class="card card-hover hoverable">
+                                    <div class="card-image" data-category="all">
+                                        <img src="https://encolombia.com/wp-content/uploads/2021/12/Que-es-paisaje.jpg">
+                                        <div class="chip red tab_card">Subido Recientemente</div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="blogs__item-hashtag">#webdevelopment #frontend</p>
+                                        <h4 class="blogs__item-title"><a
+                                                href="{{ url_for('main_web_site.blog_single', title=blog.title) }}">{{blog.title}}</a>
+                                        </h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas modi, iure
+                                            expedita quae neque deserunt, perferendis officiis quidem beatae ducimus ut
+                                            rem exercitationem numquam aut nulla assumenda id a recusandae?</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <span id="hour_{{ loop.index }}">{{ blog.created }}</span>
+                                    </footer>
+
+                                </div>
+                            </div>
+                            <div class="col s12 m6 blogs__item" data-category="seguridad">
+                                <div class="card card-hover hoverable">
+                                    <div class="card-image" data-category="all">
+                                        <img src="https://encolombia.com/wp-content/uploads/2021/12/Que-es-paisaje.jpg">
+                                        <div class="chip red tab_card">Subido Recientemente</div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="blogs__item-hashtag">#webdevelopment #frontend</p>
+                                        <h4 class="blogs__item-title"><a
+                                                href="{{ url_for('main_web_site.blog_single', title=blog.title) }}">{{blog.title}}</a>
+                                        </h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas modi, iure
+                                            expedita quae neque deserunt, perferendis officiis quidem beatae ducimus ut
+                                            rem exercitationem numquam aut nulla assumenda id a recusandae?</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <span id="hour_{{ loop.index }}">{{ blog.created }}</span>
+                                    </footer>
+
+                                </div>
+                            </div>
+                            <div class="col s12 m6 blogs__item" data-category="seguridad">
+                                <div class="card card-hover hoverable">
+                                    <div class="card-image" data-category="all">
+                                        <img src="https://encolombia.com/wp-content/uploads/2021/12/Que-es-paisaje.jpg">
+                                        <div class="chip red tab_card">Subido Recientemente</div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="blogs__item-hashtag">#webdevelopment #frontend</p>
+                                        <h4 class="blogs__item-title"><a
+                                                href="{{ url_for('main_web_site.blog_single', title=blog.title) }}">{{blog.title}}</a>
+                                        </h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas modi, iure
+                                            expedita quae neque deserunt, perferendis officiis quidem beatae ducimus ut
+                                            rem exercitationem numquam aut nulla assumenda id a recusandae?</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <span id="hour_{{ loop.index }}">{{ blog.created }}</span>
+                                    </footer>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="row">
+                            <ul class="pagination" id="pagination">
+                                <!-- Enlaces de paginación -->
+                            </ul>
+                        </div>
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            function calcularTiempoPasado(fecha, elementId) {
+                                let fechaPasada = new Date(fecha);
+                                let ahora = new Date();
+                                let diferencia = ahora - fechaPasada;
+
+                                let segundos = Math.floor(diferencia / 1000);
+                                let minutos = Math.floor(segundos / 60);
+                                let horas = Math.floor(minutos / 60);
+                                let dias = Math.floor(horas / 24);
+                                let semanas = Math.floor(dias / 7);
+
+                                if (semanas >= 1) {
+                                    return fechaPasada.toLocaleDateString("es-ES", {
+                                        month: "long",
+                                        day: "numeric",
+                                        year: "numeric"
+                                    });
+                                } else if (dias >= 1) {
+                                    return "Hace " + dias + (dias === 1 ? " día" : " días");
+                                } else if (horas >= 1) {
+                                    return "Hace " + horas + (horas === 1 ? " hora" : " horas");
+                                } else if (minutos >= 1) {
+                                    return "Hace " + minutos + (minutos === 1 ? " minuto" : " minutos");
+                                } else {
+                                    return "Hace menos de un minuto";
+                                }
+                            }
+
+                            let fechaPasada = document.getElementById("hour_{{ loop.index }}").textContent;
+                            let tiempoPasado = calcularTiempoPasado(fechaPasada, "hour_{{ loop.index }}");
+                            document.getElementById("hour_{{ loop.index }}").textContent = tiempoPasado;
+                        });
+                    </script>
+                    <script>
+                        var cardsPerPage = 4;
+                        var cardContent = document.getElementById('blogs__container');
+                        var cards = cardContent.querySelectorAll('.blogs__item');
+                        var totalPages = Math.ceil(cards.length / cardsPerPage);
+                        var currentPage = 1;
+
+                        function showPageContent() {
+                            var start = (currentPage - 1) * cardsPerPage;
+                            var end = start + cardsPerPage;
+
+                            for (var i = 0; i < cards.length; i++) {
+                                if (i >= start && i < end) {
+                                    cards[i].style.display = 'inline-block';
+                                } else {
+                                    cards[i].style.display = 'none';
+                                }
+                            }
+                        }
+
+                        function updatePagination() {
+                            var pagination = document.getElementById('pagination');
+                            pagination.innerHTML = '';
+
+                            var prevBtn = document.createElement('li');
+                            if (currentPage === 1) {
+                                prevBtn.classList.add('disabled');
+                            } else {
+                                prevBtn.classList.add('waves-effect');
+                            }
+                            var prevLink = document.createElement('a');
+                            prevLink.href = '#!';
+                            prevLink.onclick = prevPage;
+                            var prevIcon = document.createElement('i');
+                            prevIcon.classList.add('material-icons');
+                            prevIcon.textContent = 'chevron_left';
+                            prevLink.appendChild(prevIcon);
+                            prevBtn.appendChild(prevLink);
+                            pagination.appendChild(prevBtn);
+
+                            for (var i = 1; i <= totalPages; i++) {
+                                var pageBtn = document.createElement('li');
+                                if (i === currentPage) {
+                                    pageBtn.classList.add('active');
+                                } else {
+                                    pageBtn.classList.add('waves-effect');
+                                }
+                                var pageLink = document.createElement('a');
+                                pageLink.href = '#!';
+                                pageLink.textContent = i;
+                                pageLink.onclick = (function (pageNum) {
+                                    return function () {
+                                        changePage(pageNum);
+                                    };
+                                })(i);
+                                pageBtn.appendChild(pageLink);
+                                pagination.appendChild(pageBtn);
+                            }
+
+                            var nextBtn = document.createElement('li');
+                            if (currentPage === totalPages) {
+                                nextBtn.classList.add('disabled');
+                            } else {
+                                nextBtn.classList.add('waves-effect');
+                            }
+                            var nextLink = document.createElement('a');
+                            nextLink.href = '#!';
+                            nextLink.onclick = nextPage;
+                            var nextIcon = document.createElement('i');
+                            nextIcon.classList.add('material-icons');
+                            nextIcon.textContent = 'chevron_right';
+                            nextLink.appendChild(nextIcon);
+                            nextBtn.appendChild(nextLink);
+                            pagination.appendChild(nextBtn);
+                        }
+
+                        function changePage(page) {
+                            currentPage = page;
+                            showPageContent();
+                            updatePagination();
+                        }
+
+                        function nextPage() {
+                            if (currentPage < totalPages) {
+                                currentPage++;
+                                showPageContent();
+                                updatePagination();
+                            }
+                        }
+
+                        function prevPage() {
+                            if (currentPage > 1) {
+                                currentPage--;
+                                showPageContent();
+                                updatePagination();
+                            }
+                        }
+
+                        if (cards.length > cardsPerPage) {
+                            for (var i = cardsPerPage; i < cards.length; i++) {
+                                cards[i].style.display = 'none';
+                            }
+                            updatePagination();
+                        }
+                    </script>
+                    <div class="col s12 m4 l4 xl3 red">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">textsms</i>
+                                        <input type="text" id="autocomplete-input" class="autocomplete">
+                                        <label for="autocomplete-input">Autocomplete</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var elems = document.querySelectorAll('.autocomplete');
+                                var instances = M.Autocomplete.init(elems, {
+                                    data: {
+                                        "Apple": null,
+                                        "Microsoft": null,
+                                        "Google": 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/706px-Google_%22G%22_Logo.svg.png',
+                                        "goolem": null
+                                    },
+                                    limit: 4,
+                                    minLength: 2
+
+
+                                });
+                            });
+                        </script>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="card">
+                                    <style>
+                                        .collection-item__btn {
+                                            display: block;
+                                            padding: 0 !important;
+                                            margin: 10px 20px !important;
+                                            line-height: 40px;
+                                            height: 40px;
+                                            border-radius: 20px;
+                                            margin-right: 10px;
+                                        }
+
+                                        .collection-item:hover {
+                                            background: #645bff;
+                                        }
+                                    </style>
+
+                                    <ul class="collection with-header">
+                                        <li class="collection-header">
+                                            <h5>First Names</h5>
+                                            data-category="all"
+                                        </li>
+                                        <li class="collection-item collection-item__btn waves-effect waves-light filter-item active" data-category="all"><a
+                                            href="#" class="btn-flat"
+                                            style="display: block; margin: 0; width: 100%; height: 100%; ">Todos</a>
+                                    </li>
+                                        <li class="collection-item collection-item__btn waves-effect waves-light filter-item" data-category="seguridad"><a
+                                                href="#" class="btn-flat "
+                                                style="display: block; margin: 0; width: 100%; height: 100%; ">seguridad</a>
+                                        </li>
+                                        <li class="collection-item collection-item__btn waves-effect waves-light">Alvin
+                                        </li>
+                                        <li class="collection-item collection-item__btn waves-effect waves-light">Alvin
+                                        </li>
+                                        <li class="collection-item collection-item__btn waves-effect waves-light">Alvin
+                                        </li>
+                                    </ul>
+                                    
+<script>
+    // Función para filtrar los blogs según la categoría seleccionada
+    function filterBlogs(category) {
+      const blogContainer = document.querySelector(".blogs__container");
+      const blogs = blogContainer.getElementsByClassName("blogs__item");
+      console.log(blogs)
+    
+      for (let i = 0; i < blogs.length; i++) {
+        const blog = blogs[i];
+        const blogCategory = blog.getAttribute("data-category");
+    
+        if (category === "all" || category === blogCategory) {
+          blog.style.display = "block";
+        } else {
+          blog.style.display = "none";
+        }
+      }
+    }
+    
+    // Agrega eventos de clic a los elementos de filtro
+    const filterItems = document.getElementsByClassName("filter-item");
+    for (let i = 0; i < filterItems.length; i++) {
+      const item = filterItems[i];
+    
+      item.addEventListener("click", function () {
+        const category = this.getAttribute("data-category");
+        filterBlogs(category);
+    
+        // Cambia la clase activa
+        const activeItem = document.querySelector(".filter-item.active");
+        activeItem.classList.remove("active");
+        this.classList.add("active");
+      });
+    }
+    
+    </script>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .blogs__container {
+                padding: 1rem;
+            }
+        </style>
+
+        <section>
+            <div class="row">
+                <div class="col s12 m6 card_blog">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="https://encolombia.com/wp-content/uploads/2021/12/Que-es-paisaje.jpg">
+                            <div class="chip red tab_card">Subido Recientemente</div>
+                        </div>
+                        <div class="card-content">
+                            <p class="blogs__item-hashtag">#webdevelopment #frontend</p>
+                            <h4 class="blogs__item-title"><a
+                                    href="{{ url_for('main_web_site.blog_single', title=blog.title) }}">{{blog.title}}</a>
+                            </h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas modi, iure expedita
+                                quae neque deserunt, perferendis officiis quidem beatae ducimus ut rem exercitationem
+                                numquam aut nulla assumenda id a recusandae?</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .card {
+                    border-radius: 1.5rem;
+                    overflow: hidden;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+                }
+
+                .card-image {
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .card-image img {
+                    height: auto;
+                    width: 100%;
+                    display: block;
+                    object-fit: cover;
+                }
+
+                .card-title {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 16px;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+
+                .card-content {
+                    padding: 24px;
+                }
+
+                .card-action {
+                    padding: 24px;
+                    background-color: #f5f5f5;
+                }
+
+                .card-action a {
+                    margin-right: 16px;
+                }
+
+                .tab_card {
+                    position: absolute;
+                    left: 0;
+                    top: 20px;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    color: white;
+                    text-transform: uppercase;
+                    z-index: 1;
+                    background: red;
+                    border-radius: 0 2rem 2rem 0;
+                }
+
+                .card-hover:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+                }
+
+                .card-hover {
+                    transition: 250ms all ease-in-out;
+                    cursor: pointer;
+                }
+
+                .card-footer {
+                    padding: 16px;
+                    background-color: #f5f5f5;
+                }
+            </style>
+
+        </section>
+
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
